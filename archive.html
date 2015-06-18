@@ -4,7 +4,7 @@ layout: default
 
 <div class="well">
 {%for post in site.posts %}
-{% if post.category == 'publication'%}
+{% if post.category == 'general'%}
     {% unless post.next %}
         <h1>{{ post.date | date: '%Y' }}</h1>
         <ul>
