@@ -12,7 +12,9 @@ layout: default
         {% capture nyear %}{{ post.next.date | date: '%Y' }}{% endcapture %}
         {% if year != nyear %}
             </ul>
+            {% if post.category == 'publication'%}
             <h1>{{ post.date | date: '%Y' }}</h1>
+            {% endif %}
             <ul>
         {% endif %}
     {% endunless %}
