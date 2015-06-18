@@ -4,7 +4,6 @@ layout: default
 
 <div class="well">
 {%for post in site.posts %}
-{% if post.category == 'publication'%}
     {% unless post.next %}
         <h1>{{ post.date | date: '%Y' }}</h1>
         <ul>
@@ -17,6 +16,7 @@ layout: default
             <ul>
         {% endif %}
     {% endunless %}
+    {% if post.category == 'publication'%}
     <li>{{ post.date | date: "%b %-d" }} - {{ post.content }}</li>
 {% endif %}
 {% endfor %}
