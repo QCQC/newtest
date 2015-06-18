@@ -3,6 +3,7 @@ layout: default
 ---
 
 {% for post in site.posts%}
+{% if post.category == 'general'%}
 <div class="article">
     <div class="well">
         <h1><a href="{{ site.baseurl}}{{ post.url }}">{{ post.date | date: "%b %-d, %Y" }} - {{ post.title }} - {{ post.category }}</a></h1>
@@ -14,5 +15,5 @@ layout: default
         </div>
     </div>
 </div>
-
+{% endif %}
 {% endfor %}
