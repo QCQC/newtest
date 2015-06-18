@@ -3,9 +3,6 @@ layout: default
 ---
 
 {% for post in site.posts%}
-  {% if post.category == 'news' %}
-  <h1>This is news category</h1>
-  {% endif %}
 <div class="article">
     <div class="well">
         <h1><a href="{{ site.baseurl}}{{ post.url }}">{{ post.date | date: "%b %-d, %Y" }} - {{ post.title }}</a></h1>
