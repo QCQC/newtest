@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Lorem ipsum dolor sit amet"
-date: 2014-05-05
+date: 2014-05-05 16:25:06 -0700
 comments: false
 category: publication
 ---
