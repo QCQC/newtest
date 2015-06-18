@@ -26,7 +26,6 @@ comments: true
 
 permalink: /:year/:month/:title
 paginate: 3
-pagination_path: about/page:num/
 
 
 
