@@ -9,7 +9,7 @@ layout: default
     <h1>{{ currentdate }}</h1>
     {% assign date = currentdate %} 
   {% endif %}
-    <li><a href="{{ post.url }}">{{ post.content }}</a></li>
+    <li>{{ post.content }}</li>
     {%endif%}
 {% endfor %}
 </div>
