@@ -3,12 +3,14 @@ layout: default
 ---
 <div class="well">
 {% for post in site.posts %}
+{% if post.category == "publication" %}
   {% assign currentdate = post.date | date: "%Y" %}
   {% if currentdate != date %}
     <li id="y{{currentdate}}">{{ currentdate }}</li>
     {% assign date = currentdate %} 
   {% endif %}
     <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+    {%endif%}
 {% endfor %}
 </div>
 
