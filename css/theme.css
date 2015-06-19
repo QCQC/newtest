@@ -51,6 +51,7 @@ body {
 }
 
 h1.orangesize {
+      font: bold 20px/1.5 Helvetica, Verdana, sans-serif;
     color: #ee4444;
     font-size: 1.3em;
 }
