@@ -6,11 +6,7 @@
     <h1>Recent Posts</h1>
     <ul>
         {% for post in site.posts limit:5 %}
-        {% if post.category == "news" %}
           <li><a href="{{ site.baseurl}}{{ post.url }}">{{ post.title }}</a></li>
-        {% endif %}
         {% endfor %}
     </ul>
 </div>
-
-
