@@ -49,3 +49,9 @@ body {
 .author a {
     color: #ee4444;
 }
+
+h1.orangesize {
+        color: #ee4444;
+    font-size: 1.3em;
+}
+}
