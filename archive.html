@@ -2,20 +2,13 @@
 layout: default
 ---
 <div class="well">
-	<ul>
-	  {% for post in site.posts %}
-	  {% if post.category == "publication" %}
-	    {% unless post.next %}
-	      <h3>{{ post.date | date: '%Y %b' }}</h3>
-	    {% else %}
-	      {% capture year %}{{ post.date | date: '%Y %b' }}{% endcapture %}
-	      {% capture nyear %}{{ post.next.date | date: '%Y %b' }}{% endcapture %}
-	      {% if year != nyear %}
-	        <h3>{{ post.date | date: '%Y %b' }}</h3>
-	      {% endif %}
-	    {% endunless %}
-	    <li><a href="{{ post.url }}">{{ post.title }}</a></li>
-	  {% endfor %}
-	</ul>
-	{% endif %}
+{% for post in site.posts %}
+  {% assign currentdate = post.date | date: "%Y" %}
+  {% if currentdate != date %}
+    <li id="y{{currentdate}}">{{ currentdate }}</li>
+    {% assign date = currentdate %} 
+  {% endif %}
+    <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+{% endfor %}
 </div>
+
