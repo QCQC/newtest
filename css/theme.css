@@ -33,6 +33,10 @@ body {
     color: #3071a9;
 }
 
+.sidebar ul {
+    list-style-type: none;
+}
+
 .container-left {
     margin: 0;
 }
