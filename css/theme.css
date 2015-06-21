@@ -33,6 +33,10 @@ body {
     color: #3071a9;
 }
 
+.sidebar ul {
+    float: left;
+}
+
 .container-left {
     margin: 0;
 }
