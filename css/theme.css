@@ -34,7 +34,7 @@ body {
 }
 
 .sidebar ul {
-    float: left;
+    text-align: left;
 }
 
 .container-left {
