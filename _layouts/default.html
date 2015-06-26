@@ -12,24 +12,9 @@
             href="{{ site.base }}/blog/blog.xml">
     </head>
     <body>
+        
         <div class="container">
-          <div class="header">
-            <ul class="nav nav-pills pull-right">
-              {% assign shorturl = page.url | replace:'index.html','' %}
-              {% for item in site.navigation %}
-                <li {% if item.link == shorturl %}class="active"{% endif %}>
-                  <a href="{{ site.base }}{{ item.link }}">
-                    {{ item.title }}
-                  </a>
-                </li>
-              {% endfor %}
-            </ul>
-            <a href="{{ site.base }}/">
-                <img src="{{ site.base }}/https://cloud.githubusercontent.com/assets/12739884/8318751/a18bb146-19d5-11e5-8c22-bff21955dc5c.png"
-                    srcset="{{ site.base }}/img/logo@2x.png 2x"
-                    alt="Awesome" id="logo">
-            </a>
-          </div>
+          {% include header.html %}
 
           {% comment %}Liquid is sort of terrible! I think "!= true" is the
           only way to do negation?{% endcomment %}
