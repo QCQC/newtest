@@ -12,9 +12,10 @@
             href="{{ site.base }}/blog/blog.xml">
     </head>
     <body>
-        
         <div class="container">
-          {% include header.html %}
+          <div class="header">
+{% include header.html %}
+          </div>
 
           {% comment %}Liquid is sort of terrible! I think "!= true" is the
           only way to do negation?{% endcomment %}
