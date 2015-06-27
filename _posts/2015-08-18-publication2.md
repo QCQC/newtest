@@ -1,9 +1,5 @@
 ---
 layout: post
-title: "Lorem ipsum dolor sit amet"
-date: 2015-06-18 16:25:06 -0700
-comments: false
-category: publication
+shortnews: true
 ---
-
-Swaroop Pophale, "Static Analysis Tool for Synchronization Analysis, Representation, and Optimizations for Applications Using OpenSHMEM", PhD Dissertation Thesis, University of Houston, 2015
+This is a short notice of something that happened recently. Just a news update blurb in no great detail.
