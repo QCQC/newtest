@@ -1,9 +1,5 @@
 ---
 layout: post
-title: "Lorem ipsum dolor sit amet"
-date: 2015-05-22 16:25:06 -0700
-comments: false
-category: publication
+shortnews: true
 ---
-
-Jinxin Yang, "A Validation Suite for High-level Directive-based Programming Model for Accelerators", Masters Thesis, University of Houston, 2015
+This is a short notice of something that happened recently. Just a news update blurb in no great detail.
