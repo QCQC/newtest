@@ -1,40 +1,33 @@
-# Jekyll configuration
+name: Awesome Research Group
+url: http://awesome.example.edu
 
-name: PassLab
-description: Parallel Architecture and System Software Research Laboratory
+exclude: [bibble, README.md, Makefile, screenshot.png]
 
-# url is currently only used only for the RSS feed in feed.xml
-url: http://scotte.github.io
-
-# baseurl will often be '', but for a project page on gh-pages, it needs to
-# be the project name.
-# *** IMPORTANT: If your local "jekyll serve" throws errors change this to '' or
-#     run it like so: jekyll serve --baseurl=''
-baseurl: /newtest
-
-# This can be '' to hide the Github nav button
-github: 'scotte/jekyll-clean'
-
-# Set this to your UA-# value, or '' to disable the block completely
-gaaccount: ''
-
-# Set this to your disqus shortname to enable comments. Note that the 'comments'
-# setting below must also be true. Individual posts can override 'comments' to
-# disable on a post-by-post basis
-disqus: ''
-comments: true
-
-permalink: /:year/:month/:title
-paginate: 3
-
-
-
-highlighter: pygments
+# use this library to parse Markdown
 markdown: redcarpet
 redcarpet:
-  extensions: ["no_intra_emphasis", "fenced_code_blocks", "autolink", "tables", "with_toc_data"]
+    extensions: [smart, tables]
 
-exclude: ['README.md', 'LICENSE']
+# colorize code snippets with the pygments module
+pygments: true
+
+# The path structure for blog posts.
+permalink: /blog/:year/:month/:day/:title.html
+
+# Sections on the "people" page.
+roles:
+    - {key: faculty, name: Faculty}
+    - {key: staff, name: Staff}
+    - {key: postdoc, name: Researchers}
+    - {key: grad, name: Graduate Students}
+    - {key: collab, name: Collaborators}
+    - {key: alum, name: Alumni}
+
+# Number of news stories on the front page.
+front_page_news: 8
+
+# Base pathname for links.
+baseurl: /newtest
 
 navigation:
     - title: Home
