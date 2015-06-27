@@ -32,7 +32,7 @@ baseurl: /newtest
 navigation:
     - title: Home
       link: /   
-      - title: Projects
+    - title: Projects
       link: /projects.html
     - title: People
       link: /people.html
