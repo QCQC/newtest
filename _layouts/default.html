@@ -33,12 +33,13 @@
       </ul>
      
       <ul class="nav navbar-nav navbar-right" style="margin-bottom:0px">
+            {% assign shorturl = page.url | replace:'index.html','' %}
         {% for item in site.navigation %}
-                <li {% if item.link == page.url %} class="active"{% endif %}>
+                <li {% if item.link == shorturl %} class="active"{% endif %}>
                     
                 <a href="{{ site.baseurl }}{{ item.link }}">
                     {{ item.title }}
-                    {% if item.link == page.url %}
+                    {% if item.link == shorturl %}
                     <span class="sr-only">(current)</span>
                     {% endif %}
                   </a>
