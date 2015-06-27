@@ -34,7 +34,7 @@
      
       <ul class="nav navbar-nav navbar-right" style="margin-bottom:0px">
         {% for item in site.navigation %}
-                <li {% if item.link == shorturl %}<span class="sr-only">(current)</span>{% endif %}>
+                <li {% if item.link == page.active %}<span class="sr-only">(current)</span>{% endif %}>
                 <a href="{{ site.base }}{{ item.link }}">
                     {{ item.title }}
                   </a>
