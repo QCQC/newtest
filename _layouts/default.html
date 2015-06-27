@@ -34,11 +34,11 @@
      
       <ul class="nav navbar-nav navbar-right" style="margin-bottom:0px">
         {% for item in site.navigation %}
-                <li {% if item.link == page.active %} class="active"{% endif %}>
+                <li {% if item.link == page.url %} class="active"{% endif %}>
                     
                 <a href="{{ site.baseurl }}{{ item.link }}">
                     {{ item.title }}
-                    {% if item.link == page.active %}
+                    {% if item.link == page.url %}
                     <span class="sr-only">(current)</span>
                     {% endif %}
                   </a>
