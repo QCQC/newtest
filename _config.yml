@@ -31,7 +31,7 @@ baseurl: /newtest
 
 navigation:
     - title: Home
-      link: /
+      link: /index.html
     - title: People
       link: /people.html
     - title: Research
