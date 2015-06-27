@@ -1,78 +1,29 @@
 ---
 layout: default
+title: People
 ---
-<h1 class = "orangesize">People</h1>
-<div class = "imagediv">
-  <ul class = "imagediv">
-    <li class = "imagediv">
-      <img src="https://cse.wwu.edu/sites/cse.wwu.edu/files/Computer%20Science/noimage.png" class = "imagediv">
-      <h3 class = "imagediv">Person Name</h3>
-      <p class = "imagediv">This person's bio.</p>
-    </li>
-       
-       <li class = "imagediv">
-      <img src="https://cse.wwu.edu/sites/cse.wwu.edu/files/Computer%20Science/noimage.png" class = "imagediv">
-      <h3 class = "imagediv">Person Name</h3>
-      <p class = "imagediv">Lorem ipsum dolor sit amet...</p>
-    </li>
- 
-       <li class = "imagediv">
-      <img src="https://cse.wwu.edu/sites/cse.wwu.edu/files/Computer%20Science/noimage.png" class = "imagediv">
-      <h3 class = "imagediv">Person Name</h3>
-      <p class = "imagediv">Lorem ipsum dolor sit amet...</p>
-    </li>
-     <li class = "imagediv">
-      <img src="https://cse.wwu.edu/sites/cse.wwu.edu/files/Computer%20Science/noimage.png" class = "imagediv">
-      <h3 class = "imagediv">Person Name</h3>
-      <p class = "imagediv">Lorem ipsum dolor sit amet...</p>
-    </li>
-  </ul>
-  
-  <style>
-  * {margin: 0; padding: 0;}
- 
-div.imagediv {
-  margin: 10px;
-}
- 
-ul.iamgediv {
-  list-style-type: none;
-  width: 500px;
-  
-}
- 
-h3.imagediv {
-  font: bold 20px/1.5 Helvetica, Verdana, sans-serif;
-  color: #ee4444;
-  font-size: 1.3em;
-}
- 
-li.imagediv img.imagediv {
-  float: left;
-  margin: 0 15px 0 0;
-  height: 200px; width: 300px; overflow: hidden; 
-   list-style-type: none;
-}
- 
-li.imagediv p.imagediv {
-    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
-  font-size: 14px;
-  line-height: 1.42857143;
-  color: #333;
-}
- 
-li.imagediv {
-  padding: 10px;
-  overflow: auto;
-   list-style-type: none;
-}
 
- 
-li:hover.imagediv {
-  background: #eee;
-}
-
-  
-</style>
-</div>
-
+{% for role in site.roles %}
+  <h3>{{ role.name }}</h3>
+  <dl class="people">
+  {% for item in site.data.people %}
+    {% assign person = item[1] %}
+    {% if person.role == role.key %}
+      <dt class="person">
+        {% if person.webpage %}
+        <a href="{{ person.webpage |escape }}">
+        {% endif %}
+          {{ person.display_name }}
+        {% if person.webpage %}
+        </a>
+        {% endif %}
+      </dt>
+      <dd>
+        {% if person.bio %}
+          {{ person.bio | markdownify }}
+        {% endif %}
+      </dd>
+    {% endif %}
+  {% endfor %}
+  </dl>
+{% endfor %}
