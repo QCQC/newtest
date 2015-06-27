@@ -38,6 +38,9 @@
                     
                 <a href="{{ site.baseurl }}{{ item.link }}">
                     {{ item.title }}
+                    {% if item.link == page.active %}
+                    <span class="sr-only">(current)</span>
+                    {% endif %}
                   </a>
                   </li>
         {% endfor %}
