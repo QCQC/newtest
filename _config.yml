@@ -40,5 +40,8 @@ navigation:
       link: /research/
     - title: Publications
       link: /publications.html
-    - title: People
-      link: /people.html
+    - title: Software
+      link: /software.html
+    - title: Contact Us
+      link: /software.html
+    
